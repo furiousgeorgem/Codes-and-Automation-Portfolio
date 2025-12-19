@@ -18,14 +18,17 @@ Workflow Optimization: Transforming tedious manual searches into synchronized br
 | **[Station Tagging Reporter](./furious_reporter2/)** | SQL Export Delta & Slack Integration | Pandas, Slack API, SQL Logic |
 | **[Amazon Search Automator](./amazon_songs/)** | Browser-level procurement automation | Python, `webbrowser` |
 
-Repository Structure
 
-├── amazon_songs/                 # Procurement automation
-├── batch_extract_api/            # Tiered Fuzzy & AI matching documentation
-├── furious_multi_matcher2/       # Parallelized matching engine
-├── furious_reporter2/            # SQL Delta/Slack reporting
-├── WORKFLOW.md                   # Operational standards
-└── README.md                     # Portfolio directory
+## **Repository Structure**
+
+```text
+Codes-and-Automation-Portfolio/
+├── amazon_songs/           # Procurement automation
+├── batch_extract_api/      # Tiered Fuzzy & AI matching documentation
+├── furious_multi_matcher2/  # Parallelized matching engine
+├── furious_reporter2/      # SQL Delta/Slack reporting
+├── WORKFLOW.md             # Operational standards
+└── README.md               # Portfolio directory
 Operational ExcellenceBeyond the code, this repository showcases a "Low-Friction" mindset. Every tool here was built to solve a specific operational pain point:Removing Manual Work: Shifting from one-by-one searching to automated batching.Ensuring Data Integrity: Using weighted scoring to prevent "Remix Traps" and metadata drift.Cross-Functional Communication: Automating technical updates for dev teams to ensure project transparency.
 
 ## **Portfolio Review Guide**
