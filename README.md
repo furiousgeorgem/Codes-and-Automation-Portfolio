@@ -1,63 +1,39 @@
-# Codes and Automation Portfolio
+Codes and Automation Portfolio
+George Sayama McHenry | Data Operations & Technical Curation GitHub: furiousgeorgem
 
-**Owner:** George Sayama McHenry  
-**GitHub:** [furiousgeorgem](https://github.com/furiousgeorgem)
+Executive Summary
+A specialized collection of Python-driven automation tools designed for high-volume music data curation, catalog synchronization, and operational reporting. This portfolio demonstrates the ability to bridge the gap between complex music metadata and scalable engineering solutions, specifically tailored for the needs of major media agencies and streaming platforms.
+Core Competencies
+Automation & Scripting: Streamlining manual bottlenecks in music procurement and tagging.
 
----
+Data Reconciliation: High-speed fuzzy matching and AI-driven metadata verification.
 
-## Overview
+Engineering Reporting: Automating SQL delta reports and developer-handoff notifications.
 
-This repository showcases my Python scripts and automation projects, primarily focused on music data curation and processing. Each project includes:  
+Workflow Optimization: Transforming tedious manual searches into synchronized browser automations.
+| Project | Focus | Tech Stack |
+| :--- | :--- | :--- |
+| **[Batch Extract API](./batch_extract_api/)** | Multi-tier catalog reconciliation (Fuzzy + AI) | Python, OpenAI API, RapidFuzz |
+| **[Furious Multi-Matcher V2](./furious_multi_matcher2/)** | High-speed parallel matching engine | Multi-threading, N-Grams, Regex |
+| **[Station Tagging Reporter](./furious_reporter2/)** | SQL Export Delta & Slack Integration | Pandas, Slack API, SQL Logic |
+| **[Amazon Search Automator](./amazon_songs/)** | Browser-level procurement automation | Python, `webbrowser` |
 
-- A Python script (`.py`) implementing the automation or analysis  
-- A Markdown explanation (`.md`) describing the functionality, usage, and outputs  
-- Optional assets or examples to demonstrate results  
+Repository Structure
 
-This portfolio highlights both my technical skills and my workflow documentation, allowing others to understand, replicate, or extend my work.
+├── amazon_songs/                 # Procurement automation
+├── batch_extract_api/            # Tiered Fuzzy & AI matching documentation
+├── furious_multi_matcher2/       # Parallelized matching engine
+├── furious_reporter2/            # SQL Delta/Slack reporting
+├── WORKFLOW.md                   # Operational standards
+└── README.md                     # Portfolio directory
+Operational ExcellenceBeyond the code, this repository showcases a "Low-Friction" mindset. Every tool here was built to solve a specific operational pain point:Removing Manual Work: Shifting from one-by-one searching to automated batching.Ensuring Data Integrity: Using weighted scoring to prevent "Remix Traps" and metadata drift.Cross-Functional Communication: Automating technical updates for dev teams to ensure project transparency.
 
----
-## About Me
+## **Portfolio Review Guide**
 
-I am George Sayama McHenry, a musician and technical curator with experience in music data curation, automation, and Python scripting. I combine a deep understanding of music with programming skills to streamline processes, maintain high-quality data, and create scalable tools.  
+This repository is designed for technical review by hiring managers and engineering teams. To evaluate the logic and code quality:
 
-My work spans:  
-- Python scripting and automation for music library management  
-- Data matching, cleansing, and transformation  
-- Workflow documentation and version-controlled project management  
-- Audio editing and labeling for mixdowns and previews  
+1. **Explore Project Folders:** Each directory represents a standalone operational solution.
+2. **Review the Logic:** Open the `.py` files to examine the implementation of multi-threading, fuzzy matching, and API integrations.
+3. **Analyze the Documentation:** Each project includes a dedicated Markdown file explaining the "Problem/Solution" framework and the business impact of the tool.
 
-This portfolio demonstrates my ability to blend creative insight with technical proficiency, showcasing both my scripts and the structured workflows that make them reliable and maintainable.
-
-## Repository Structure
-Codes-and-Automation-Portfolio/
-├── README.md
-├── WORKFLOW.md
-├── WORKFLOW.pdf
-├── .gitignore
-├── batch_extract_artists_furious3/
-│   ├── batch_extract_artists_furious3.py
-│   └── batch_extract_artists_furious3.md
-├── furious_multi_matcher2/
-│   ├── furious_multi_matcher2.py
-│   └── furious_track_matcher2.md
-└── assets/
-- `WORKFLOW.md` / `WORKFLOW.pdf` – Step-by-step instructions for maintaining and updating scripts  
-- Each project folder – Contains script and explanation files  
-- `assets/` – Optional folder for screenshots, sample data, or diagrams  
-
----
-
-## How to Use
-
-1. Clone this repository:  
-```bash
-git clone https://github.com/furiousgeorgem/Codes-and-Automation-Portfolio.git
-2.	Navigate to a project folder:
-cd Codes-and-Automation-Portfolio/batch_extract_artists_furious3
-	3.	Review the Markdown explanation for usage instructions, then run the Python script as described.
-described.
-
-Notes
-	•	This repository is private and intended as a professional portfolio.
-	•	No sensitive API keys or company data are included.
-	•	Future updates will include additional scripts, workflow improvements, and documentation.
+*Note: This code is provided for demonstration of technical proficiency. Proprietary datasets and API credentials have been omitted for security.*
