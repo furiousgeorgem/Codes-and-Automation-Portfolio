@@ -1,18 +1,109 @@
-Role: Data Operations Engineer
+# Amazon Music Search Automation
 
-Tech Stack: Python, csv module, webbrowser module
+Automates Amazon Digital Music searches from a CSV file by opening browser tabs for each track. Eliminates repetitive manual searching during music procurement workflows.
 
-Executive Summary
-Engineered an automation script to streamline the manual procurement of "Not Found" tracks from the SXM 2025 Q4 library. By automating the browser-level search queries for thousands of metadata pairs, the tool eliminates the "busy work" of manual searching, allowing the team to focus on high-speed catalog acquisition.
+## What It Does
 
-The Challenge
-When tracks are flagged as "Not Found" in the internal catalog, they must be manually sourced and purchased. Performing individual searches for hundreds of artist/song combinations is a high-friction, repetitive task that consumes hours of operational time and increases the risk of human error during the search process.
+- Reads track data from CSV file
+- Auto-detects column names (supports variations like "track"/"song", "artist"/"artists")
+- Opens Amazon Digital Music search tabs in your browser
+- Rate limits to prevent overwhelming the browser
+- Handles URL encoding for special characters
 
-The Solution
-Batch Search Automation: Developed a Python-driven workflow that parses CSV exports of missing tracks and automatically generates targeted retail search URLs.
+## Installation
 
-Synchronized Browser Integration: Utilizes the webbrowser module to trigger simultaneous search tabs in Chrome, allowing for immediate, one-click verification and acquisition of the required assets.
+```bash
+pip install -r requirements.txt
+```
 
-Low-Friction Procurement: Transformed a tedious, multi-step manual process into a single-click automation, significantly increasing the throughput of the Music Operations team.
+## Requirements
 
-Metadata Integrity: Ensures that the exact song title and artist name from the library snapshot are passed directly to the search engine, removing typos that occur during manual entry.
+Create a `requirements.txt` file:
+
+```
+pandas>=2.0.0
+```
+
+**Python version:** 3.8+
+
+## Usage
+
+### Basic Usage
+
+```bash
+python amazon_songs2.py input.csv
+```
+
+### With Custom Limit
+
+```bash
+python amazon_songs2.py tracks.csv --limit 25
+```
+
+Opens the first 25 tracks only (default is all tracks).
+
+## Input Format
+
+CSV file with columns for track and artist information. The script automatically detects these column names:
+
+**Supported column names:**
+- Track: `track`, `song`, `title`, `name`
+- Artist: `artist`, `artists`, `performer`
+
+**Example CSV:**
+
+```csv
+track,artist
+Hotel California,Eagles
+Bohemian Rhapsody,Queen
+Stairway to Heaven,Led Zeppelin
+```
+
+## How It Works
+
+1. Loads CSV using pandas
+2. Auto-detects track and artist columns
+3. Constructs Amazon Digital Music search URL for each track
+4. Opens browser tabs with 0.5 second delay between each
+
+**Amazon search URL format:**
+```
+https://music.amazon.com/search/[track name] [artist name]
+```
+
+## Example
+
+```bash
+$ python amazon_songs2.py not_found_tracks.csv --limit 10
+
+Processing 10 tracks...
+Opening: Hotel California - Eagles
+Opening: Bohemian Rhapsody - Queen
+...
+Done! Opened 10 search tabs.
+```
+
+## Use Case
+
+Built for music procurement teams who need to quickly search Amazon's catalog for multiple tracks. Converts a list of tracks into instant browser searches, saving hours of manual copy-paste work.
+
+## Notes
+
+- Requires browser to allow multiple tabs (disable popup blockers if needed)
+- Uses default system browser
+- Rate limited to prevent browser overload
+- Works on macOS, Windows, and Linux
+
+## Technical Details
+
+**Key features:**
+- Pandas for CSV handling
+- Flexible column detection with fallback logic
+- URL encoding for special characters
+- Command-line interface with argparse
+- Error handling for missing columns
+
+**Dependencies:**
+- `pandas` - CSV file processing
+- `webbrowser` - Opens browser tabs (Python standard library)
+- `urllib.parse` - URL encoding (Python standard library)
