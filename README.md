@@ -1,42 +1,34 @@
-Codes and Automation Portfolio
-George Sayama McHenry | Data Operations & Technical Curation GitHub: furiousgeorgem
+# Codes and Automation Portfolio
 
-Executive Summary
-A specialized collection of Python-driven automation tools designed for high-volume music data curation, catalog synchronization, and operational reporting. This portfolio demonstrates the ability to bridge the gap between complex music metadata and scalable engineering solutions, specifically tailored for the needs of major media agencies and streaming platforms.
-Core Competencies
-Automation & Scripting: Streamlining manual bottlenecks in music procurement and tagging.
+A collection of short, focused automation and data‑processing tools I built to solve real tasks (music catalog matching, reporting utilities, and utilities for dataset handling). Each project folder includes a README with usage examples and the script(s) required to run the tool.
 
-Data Reconciliation: High-speed fuzzy matching and AI-driven metadata verification.
+Highlights
+- furious_multi_matcher — fuzzy, high‑speed track matching for music catalogs
+- furious_reporter — small reporting utilities for CSV-based data
+- amazon_songs — scripts for working with the Amazon songs dataset
 
-Engineering Reporting: Automating SQL delta reports and developer-handoff notifications.
+How to run the examples
+1. Clone the repository:
+   git clone https://github.com/furiousgeorgem/Codes-and-Automation-Portfolio.git
+   cd "Codes and Automation Portfolio"
 
-Workflow Optimization: Transforming tedious manual searches into synchronized browser automations.
-| Project | Focus | Tech Stack |
-| :--- | :--- | :--- |
-| **[Batch Extract API](./batch_extract_api/)** | Multi-tier catalog reconciliation (Fuzzy + AI) | Python, OpenAI API, RapidFuzz |
-| **[Furious Multi-Matcher V2](./furious_multi_matcher2/)** | High-speed parallel matching engine | Multi-threading, N-Grams, Regex |
-| **[Station Tagging Reporter](./furious_reporter2/)** | SQL Export Delta & Slack Integration | Pandas, Slack API, SQL Logic |
-| **[Amazon Search Automator](./amazon_songs/)** | Browser-level procurement automation | Python, `webbrowser` |
+2. Create a Python virtual environment and install dependencies:
+   python3 -m venv .venv
+   source .venv/bin/activate
+   pip install -r requirements.txt
 
+3. See per-project README files for specific usage examples, sample inputs, and expected output files.
 
-## **Repository Structure**
+Project organization
+- furious_multi_matcher/ — fuzzy multi-matcher with example usage and sample input format
+- furious_reporter/ — small reporting scripts and README with examples
+- amazon_songs/ — dataset-specific helper scripts and README
+- archived_scripts/ — (optional) older or backup scripts (keeps repository root tidy)
 
-```text
-Codes-and-Automation-Portfolio/
-├── amazon_songs/           # Procurement automation
-├── batch_extract_api/      # Tiered Fuzzy & AI matching documentation
-├── furious_multi_matcher2/  # Parallelized matching engine
-├── furious_reporter2/      # SQL Delta/Slack reporting
-├── WORKFLOW.md             # Operational standards
-└── README.md               # Portfolio directory
-Operational ExcellenceBeyond the code, this repository showcases a "Low-Friction" mindset. Every tool here was built to solve a specific operational pain point:Removing Manual Work: Shifting from one-by-one searching to automated batching.Ensuring Data Integrity: Using weighted scoring to prevent "Remix Traps" and metadata drift.Cross-Functional Communication: Automating technical updates for dev teams to ensure project transparency.
+Why this repo exists
+This repo demonstrates:
+- Practical automation for data workflows
+- Small, testable scripts that solve focused problems
+- Clear README-driven examples so reviewers can run pieces locally
 
-## **Portfolio Review Guide**
-
-This repository is designed for technical review by hiring managers and engineering teams. To evaluate the logic and code quality:
-
-1. **Explore Project Folders:** Each directory represents a standalone operational solution.
-2. **Review the Logic:** Open the `.py` files to examine the implementation of multi-threading, fuzzy matching, and API integrations.
-3. **Analyze the Documentation:** Each project includes a dedicated Markdown file explaining the "Problem/Solution" framework and the business impact of the tool.
-
-*Note: This code is provided for demonstration of technical proficiency. Proprietary datasets and API credentials have been omitted for security.*
+If you want any section shortened, expanded, or reworded (e.g., add a short one-line bio, contact link, or live demo GIF), tell me what to include and I’ll prepare a revised draft.
