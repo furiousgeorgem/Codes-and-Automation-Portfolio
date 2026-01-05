@@ -1,1 +1,4 @@
 .DS_Store.env
+trufflehog-output.json git add .gitignore git commit -m Ignore trufflehog-output.json git push origin main
+trufflehog-output.json git add .gitignore git commit -m Ignore trufflehog-output.json git push origin main
+trufflehog-output.json
